@@ -1,0 +1,220 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.dondophotography.com/images/camera_icon.png" />
+<title>Dustin Ondo Photography</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie.css" media="screen" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="screen" />
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/cufon.js"></script>
+<script type="text/javascript" src="js/titillium.js"></script>
+<script type="text/javascript" src="js/zoombox.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+
+
+<script type="text/javascript">
+		Cufon.replace('h1, h2, h3, h4, h5, h6, .dropcap, .dropcap2');
+</script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    var $container = $('#gallery');
+
+    // filter buttons
+    $('#filters a').click(function () {
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector
+        });
+
+        // reinitialize zoombox with new rel tags
+        $container.find('.element a').attr('rel', '');
+        $container.find('.isotope-item:not(.isotope-hidden) a').attr('rel', 'zoombox[]');
+        zoombox.init();
+
+        return false;
+    });
+
+    // switches selected class on buttons
+    $('#options').find('.option-set a').click(function () {
+        var $this = $(this);
+
+        // don't proceed if already selected
+        if (!$this.hasClass('selected')) {
+            $this.parents('.option-set').find('.selected').removeClass('selected');
+            $this.addClass('selected');
+        }
+    });
+
+    $container.isotope({
+        itemSelector: '.element',
+        masonry: {
+            columnWidth: 10
+        }
+    });
+    
+    $container.imagesLoaded( function(){
+        $container.isotope({
+          itemSelector : '.element'
+        });
+      });
+});
+</script>
+</head>
+
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper" class="clearfix"> 
+  <!-- Begin Header -->
+  <div id="header">
+    <div id="logo">
+      <h1><span class="firstname">D<span class="lastname">Ondo</span></span> <span class="grey">Photography</a></h1>
+    </div>
+
+    <!-- Begin Portfolio Navigation -->
+	<div id="options">
+    <ul id="filters" class="option-set gallerynav">
+      <li>Show:</li>
+      <li><a class="selected" href="#filter" data-filter="*"><sort-text>All</<sort-text></a></li>
+      <li><a href="#filter" data-filter=".people"><sort-text>People</<sort-text></a></li>
+      <li><a href="#filter" data-filter=".places"><sort-text>Places</<sort-text></a></li>
+      <li><a href="#filter" data-filter=".studio"><sort-text>Studio</<sort-text></a></li>
+      <li><a href="#filter" data-filter=".abstract"><sort-text>Abstract</<sort-text></a></li>
+    </ul>
+	</div>
+    <!-- End Portfolio Navigation -->
+  </div>
+  <!-- End Header --> 
+
+  <div id="container-header-bg" style="display: block; top: 0px; opacity: 1;">
+
+    <div id="header-bg">
+        <div id="header-bar-bg" style="opacity: 0;"></div>
+        <div id="header-bar"></div>
+    </div>
+
+</div>
+
+ <!-- Begin Portfolio Section -->
+  <div id="portfolio" class="clearfix"> 
+    <!-- Begin Portfolio Elements -->
+    <div id="gallery" class="grid clearfix">
+
+		      <div class="element places abstract"> <span class="boxgrid"> 
+        <a href="photos/wet-montreal.jpg" rel="zoombox[]" title="Montreal in the rain"> <img width="620" height="250" src="thumbs/wet-montreal.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places "> <span class="boxgrid"> 
+        <a href="photos/road.jpg" rel="zoombox[]" title="Road"> <img width="300" height="225" src="thumbs/road.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places"> <span class="boxgrid"> 
+        <a href="photos/rose.jpg" rel="zoombox[]" title="Rose"> <img width="300" height="400" src="thumbs/rose.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places"> <span class="boxgrid"> 
+        <a href="photos/cloud_mountain.jpg" rel="zoombox[]" title="Mountain"> <img width="250" height="292" src="thumbs/cloud_mountain.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places "> <span class="boxgrid"> 
+        <a href="photos/hermit.jpg" rel="zoombox[]" title="Hermit Crab"> <img width="264" height="175" src="thumbs/hermit.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places "> <span class="boxgrid"> 
+        <a href="photos/sunset.jpg" rel="zoombox[]" title="Phoenix Sunset"> <img width="269" height="178" src="thumbs/sunset.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element abstract"> <span class="boxgrid"> 
+        <a href="photos/up-and-up.jpg" rel="zoombox[]" title="Building"> <img width="539" height="357" src="thumbs/up-and-up.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element abstract"> <span class="boxgrid"> 
+        <a href="photos/lightway.jpg" rel="zoombox[]" title="Underpass"> <img width="310" height="205" src="thumbs/lightway.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places"> <span class="boxgrid"> 
+        <a href="photos/horizon.jpg" rel="zoombox[]" title="San Francisco skyline"> <img width="310" height="205" src="thumbs/horizon.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places"> <span class="boxgrid"> 
+        <a href="photos/vegas.jpg" rel="zoombox[]" title="Las Vegas"> <img width="310" height="157" src="thumbs/vegas.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element abstract"> <span class="boxgrid"> 
+        <a href="photos/elevator.jpg" rel="zoombox[]" title="Elevator"> <img width="169" height="256" src="thumbs/elevator.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element places"> <span class="boxgrid"> 
+        <a href="photos/sf-streets.jpg" rel="zoombox[]" title="San Francisco streets"> <img width="167" height="256" src="thumbs/sf-streets.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element Places abstract"> <span class="boxgrid"> 
+        <a href="photos/city-all-around.jpg" rel="zoombox[]" title="Buildings on all sides"> <img width="169" height="256" src="thumbs/city-all-around.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element studio"> <span class="boxgrid"> 
+        <a href="photos/bulova.jpg" rel="zoombox[]" title="Playing with products"> <img width="269" height="163" src="thumbs/bulova.jpg"/>
+        </a>
+        </span></div>
+		      <div class="element abstract"> <span class="boxgrid"> 
+        <a href="photos/lights.jpg" rel="zoombox[]" title="Phoenix lights"> <img width="269" height="179" src="thumbs/lights.jpg"/>
+        </a>
+        </span></div>
+		    </div>
+    <!-- End Portfolio Elements --> 
+  </div>
+  <!-- End Portfolio Section -->
+
+  <!-- Begin About Section -->
+  <div id="about" class="borderline"> 
+    
+    <!-- Begin About Text -->
+    <div class="section-container"> <img src="photos/dustin.jpg" alt="" class="left" /><!-- About Image -->
+      <h2>About Me</h2>
+      <!-- About Heading -->
+      <p>Write Something about yourself Dustin!</p>
+      <!-- About Paragraph --> 
+      
+	  <h3>See Something You Like</h3>
+	  <p>Feel free to save a copy of anything you like!</p>
+
+	  <h3>Contact Me</h3>
+	  <p>You can get in touch with me via:</p>
+      <!-- Begin Unordered List -->
+      <ul>
+        <li><a href="mailto:dondo@drury.edu">Email</a></li>
+        <li><a href="http://drurymirror.org/">The Mirror</a></li>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+		<li><a href="http://twitter.com/rondo/">Twitter</a></li>
+      </ul>
+
+	<p>Fancy JavaScript layouting via the excellent <a href="http://isotope.metafizzy.co/">Isotope</a>!</p>
+    </div>
+    <!-- End About Text --> 
+  </div>
+  <!-- End About Section -->   
+</div>
+<!-- End Wrapper -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22625704-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
